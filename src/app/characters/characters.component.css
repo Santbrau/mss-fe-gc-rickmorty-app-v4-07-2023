@@ -1,0 +1,42 @@
+.character-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center; 
+  }
+  
+  .character-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center; 
+  }
+  
+  .character-card p {
+    display: none; 
+  }
+  
+  .character-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Capa superior */
+  }
+  
+  .character-details-panel {
+    background-color: white;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  .btn-close {
+    margin-top: 10px;
+  }
+

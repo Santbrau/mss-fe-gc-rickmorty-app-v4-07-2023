@@ -1,0 +1,9 @@
+.character-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-details button {
+    width: 100%;
+}

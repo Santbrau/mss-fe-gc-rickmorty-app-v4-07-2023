@@ -1,0 +1,62 @@
+<div class="character-grid">
+  <div class="character-card" *ngFor="let character of displayedCharacters">
+    <app-character-details [character]="character" (showDetails)="showCharacterDetails(character)"></app-character-details>
+  </div>
+</div>
+
+<div *ngIf="selectedCharacter" class="character-overlay">
+  <div class="character-details-panel">
+    <div class="character-details">
+      <img [src]="selectedCharacter?.image" alt="Character Image">
+      <h2>{{ selectedCharacter?.name }}</h2>
+      <p>Status: {{ selectedCharacter?.status }}</p>
+      <p>Species: {{ selectedCharacter?.species }}</p>
+      <p>Gender: {{ selectedCharacter?.gender }}</p>
+      <p>Origin: {{ selectedCharacter?.origin?.name }}</p>
+      <p>Location: {{ selectedCharacter?.location?.name }}</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-warning btn-close" (click)="closeCharacterDetails()">Close</button>
+      <button (click)="deleteCharacter(selectedCharacter?.id)" class="btn btn-danger ms-2">Delete</button>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="character-form formulario text-center">
+  <h2>Add New Character</h2>
+  <br>
+  <form (submit)="addCharacter()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="newCharacter.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label>Status:</label>
+      <input type="text" [(ngModel)]="newCharacter.status" name="status" required>
+    </div>
+    <div class="form-group">
+      <label>Species:</label>
+      <input type="text" [(ngModel)]="newCharacter.species" name="species" required>
+    </div>
+    <div class="form-group">
+      <label>Gender:</label>
+      <input type="text" [(ngModel)]="newCharacter.gender" name="gender" required>
+    </div>
+    <div class="form-group">
+      <label>Origin:</label>
+      <input type="text" [(ngModel)]="newCharacter.origin" name="origin" required>
+    </div>
+    <div class="form-group">
+      <label>Location:</label>
+      <input type="text" [(ngModel)]="newCharacter.location" name="location" required>
+    </div>
+    <div class="form-group">
+      <label>Image URL:</label>
+      <input type="text" [(ngModel)]="newCharacter.image" name="image" required>
+    </div>
+    <button type="submit" class="btn btn-warning">Add Character</button>
+  </form>
+</div>
+
+<br>
+

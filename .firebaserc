@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mss-fe-gc-rickmorty-app-2023": {
+      "hosting": {
+        "mss-fe-gc-rickmorty-app-07-2023": [
+          "mss-fe-gc-rickmorty-app-2023"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mss-fe-gc-rickmorty-app-2023"
+  }
+}

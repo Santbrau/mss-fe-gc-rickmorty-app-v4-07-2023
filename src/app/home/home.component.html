@@ -1,0 +1,54 @@
+<div class="backimage">
+    <br><br>
+    <h1 class="text-center"><strong>Welcome to this Rick and Morty's web page,<br> where the creator has no idea about
+            Rick and Morty</strong></h1>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6" *ngIf="showLoginForm">
+                <h2>Log in</h2>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" class="form-control" id="login-email" name="login-email"
+                            [(ngModel)]="loginForm.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" class="form-control" id="login-password" name="login-password"
+                            [(ngModel)]="loginForm.password" required>
+                    </div>
+                    <button type="button" class="btn btn-secondary" (click)="login()">Log in</button>
+                </form>
+            </div>
+            <div class="col-md-6" *ngIf="showRegisterForm">
+                <h2>Register</h2>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" class="form-control" id="register-name" name="register-name"
+                            [(ngModel)]="registerForm.name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" class="form-control" id="register-email" name="register-email"
+                            [(ngModel)]="registerForm.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" class="form-control" id="register-password" name="register-password"
+                            [(ngModel)]="registerForm.password" required>
+                    </div>
+                    <button type="button" class="btn btn-secondary" (click)="register()">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn btn-secondary btn-margin-right" (click)="toggleLoginForm()">Log in</button>
+        <button class="btn btn-secondary" (click)="toggleRegisterForm()">Register</button>
+    </div>
+
+</div>

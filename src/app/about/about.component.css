@@ -1,0 +1,9 @@
+.containerAbout {
+    padding: 7vh;
+}
+
+.h1-with-line {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    width: 19vh;
+}
