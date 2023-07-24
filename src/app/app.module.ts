@@ -24,6 +24,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CharacterDetailsComponent,
     CharacterListComponent,
     RegisterComponent,
-    UserComponent 
+    UserComponent,
+    LoginComponent 
   ],
   imports: [
     BrowserModule,

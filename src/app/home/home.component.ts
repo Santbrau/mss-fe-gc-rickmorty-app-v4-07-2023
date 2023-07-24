@@ -22,11 +22,15 @@ export class HomeComponent {
     this.showLoginForm = false;
   }
 
-  login() {
-    // Lógica de inicio de sesión
-  }
+ngOnInit(): void {
 
-  register() {
-    // Lógica de registro
-  }
+}
+
+onClick() {
+  this.userService.logout()
+  .then(() => {
+    this.router.navigate(['/login']);
+  })
+  .catch(error => console.log(error));
+}
 }
